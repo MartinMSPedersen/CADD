@@ -169,14 +169,14 @@ then
     if [ "$GRCh38v15" = 'true' ]
     then
         echo "Setting up virtual environment for CADD v1.5"
-        #conda env create -f envs/environment_v1.5.yml
-        conda env create -f envs/environment.yml
+        conda env create -f src/environment_v1.5.yml
+
     fi
 
     if [ "$GRCh38" = 'true' ] || [ "$GRCh37" = 'true' ]
     then
         echo "Setting up virtual environment for CADD v1.4"
-        conda env create -f envs/environment.yml
+        conda env create -f src/environment.yml
     fi
 
 fi
