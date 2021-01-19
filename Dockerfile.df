@@ -4,10 +4,10 @@ RUN apt-get update
 RUN apt-get -y install unzip
 
 WORKDIR /cadd-src
-ADD https://github.com/kircherlab/CADD-scripts/archive/v1.5.zip
+ADD https://github.com/kircherlab/CADD-scripts/archive/v1.5.zip .
 RUN unzip v1.5.zip && rm v1.5.zip
 
-WORKDIR /cadd-src/CADD-scripts-master
-COPY install-new_v1.5.sh
+WORKDIR /cadd-src/CADD-scripts-1.5
+COPY install-new_v1.5.sh .
 
 RUN ./install-new_v1.5.sh
