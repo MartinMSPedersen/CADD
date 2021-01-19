@@ -7,7 +7,7 @@ WORKDIR /cadd-src
 ADD https://github.com/kircherlab/CADD-scripts/archive/CADD1.6.zip .
 RUN unzip CADD1.6.zip && rm CADD1.6.zip
 
-WORKDIR /cadd-src/CADD-scripts-master
+WORKDIR /cadd-src/CADD-scripts-CADD1.6
 COPY install-new_v1.6.sh .
 
 RUN ./install-new_v1.6.sh
